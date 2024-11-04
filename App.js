@@ -1,44 +1,65 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Alert, Button, Pressable } from 'react-native';
 
+import { CalcButton } from './component';
+
 export default function App(props) {
-  const { onPress, title = 'Save' } = props;
+  const { onPress } = props;
   return (
-    <View style={styles.container}>
-      <Text>Coucou !</Text>
-      <Button
-        title='OUI²'
-        color="#fff"
-        onPress={() => Alert.alert('Je suis le bouton 1 :D')} />
+    <View>
       <StatusBar style="auto" />
-      <Pressable style={styles.button} onPress={onPress}>
-        <Text style={styles.text}>{title}</Text>
-      </Pressable>
+      <View style={styles.row}>
+        <Pressable style={styles.button}
+          onPress={() => Alert.alert('VTK en sueur')}
+          android_ripple={{
+            color: 'white',
+          }}>
+          <Text style={styles.text}>1</Text>
+        </Pressable>
+        <Pressable style={styles.button}
+          onPress={() => Alert.alert('VTK en sueur')}
+          android_ripple={{
+            color: 'white',
+          }}>
+          <Text style={styles.text}>2</Text>
+        </Pressable>
+        <Pressable style={styles.button}
+          onPress={() => Alert.alert('VTK en sueur')}
+          android_ripple={{
+            color: 'white',
+          }}>
+          <Text style={styles.text}>3</Text>
+        </Pressable>
+        <CalcButton Nom="4" />
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   button: {
     alignItems: 'center',
     justifyContent: 'center',
-    paddingVertical: 12,
-    paddingHorizontal: 32,
-    borderRadius: 4,
+    borderRadius: 50,
+    width: 75,
+    height: 75,
     elevation: 3,
     backgroundColor: 'black',
   },
   text: {
-    fontSize: 16,
+    fontSize: 20,
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
   },
+  container: {
+    margin: 12,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  row: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly'
+  }
 });
