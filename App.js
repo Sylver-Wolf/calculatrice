@@ -10,21 +10,21 @@ export default function App(props) {
       <StatusBar style="auto" />
       <View style={styles.row}>
         <Pressable style={styles.button}
-          onPress={() => Alert.alert('VTK en sueur')}
+          onPress={() => Alert.alert('Une alerte')}
           android_ripple={{
             color: 'white',
           }}>
           <Text style={styles.text}>1</Text>
         </Pressable>
         <Pressable style={styles.button}
-          onPress={() => Alert.alert('VTK en sueur')}
+          onPress={() => Alert.alert('Une alerte')}
           android_ripple={{
             color: 'white',
           }}>
           <Text style={styles.text}>2</Text>
         </Pressable>
         <Pressable style={styles.button}
-          onPress={() => Alert.alert('VTK en sueur')}
+          onPress={() => Alert.alert('Une alerte')}
           android_ripple={{
             color: 'white',
           }}>
