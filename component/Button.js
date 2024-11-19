@@ -1,13 +1,15 @@
+import React from "react";
 import { StyleSheet, Text, Pressable, Alert } from "react-native";
 
-const CalcButton = (Nom) => {
-  return <Pressable style={styles.button}
-    onPress={() => Alert.alert('VTK en sueur')}
+const CalcButton = (props) => {
+  return (<Pressable style={styles.button}
+    onPress={() => Alert.alert('ceci est un beau message')}
     android_ripple={{
       color: 'white',
     }}>
-    <Text style={styles.text}>{Nom}</Text>
+    <Text style={styles.text}>{props.name}</Text>
   </Pressable >
+  );
 };
 
 export default CalcButton;
@@ -29,4 +31,4 @@ const styles = StyleSheet.create({
     letterSpacing: 0.25,
     color: 'white',
   },
-})
+});

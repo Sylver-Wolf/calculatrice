@@ -1,37 +1,43 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Alert, Button, Pressable } from 'react-native';
 
-import { CalcButton } from './component';
+import CalcButton from './component/Button.js'
 
-export default function App(props) {
-  const { onPress } = props;
+export default function App() {
   return (
     <View>
       <StatusBar style="auto" />
       <View style={styles.row}>
-        <Pressable style={styles.button}
-          onPress={() => Alert.alert('Une alerte')}
-          android_ripple={{
-            color: 'white',
-          }}>
-          <Text style={styles.text}>1</Text>
-        </Pressable>
-        <Pressable style={styles.button}
-          onPress={() => Alert.alert('Une alerte')}
-          android_ripple={{
-            color: 'white',
-          }}>
-          <Text style={styles.text}>2</Text>
-        </Pressable>
-        <Pressable style={styles.button}
-          onPress={() => Alert.alert('Une alerte')}
-          android_ripple={{
-            color: 'white',
-          }}>
-          <Text style={styles.text}>3</Text>
-        </Pressable>
-        <CalcButton Nom="4" />
+        <CalcButton name='bla' />
+        <CalcButton name='bla' />
+        <CalcButton name='bla' />
+        <CalcButton name='bla' />
       </View>
+      <View style={styles.row}>
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+      </View>
+      <View style={styles.row}>
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+      </View>
+      <View style={styles.row}>
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+      </View>
+      <View style={styles.row}>
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+        <CalcButton name='bla2' />
+      </View>
+
     </View>
   );
 }
