@@ -16,9 +16,12 @@ root
 
 ## Dev workflow
 
-To launch the dev build through USB, enable the USB debugging and USB install (to install the correct 'Expo Go').
-Make sure that `adb devices` detect your device.
-Then run :
+- To launch the dev build through USB, enable the USB debugging and USB install (to install the correct 'Expo Go').
+- Make sure that adb detect your device :
+```
+adb devices
+```
+- Then run :
 ```
 npx expo start --tunnel
 ```
