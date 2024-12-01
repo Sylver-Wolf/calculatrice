@@ -2,7 +2,8 @@ import React from "react";
 import { StyleSheet, Text, Pressable, Alert } from "react-native";
 
 const CalcButton = (props) => {
-  return (<Pressable style={styles.button}
+  return (
+  <Pressable style={styles.button}
     onPress={() => Alert.alert('ceci est un beau message')}
     android_ripple={{
       color: 'white',

@@ -1,56 +1,73 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 
 import CalcButton from './components/Button.js'
+
+constructor =()=> {
+  this.state = {
+    text: 'LE TEXT'
+  }
+}
+
+majText = () =>{
+  this.setText({text: 'le nouveau texte'})
+}
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <View style={styles.row}>
-        <CalcButton name='bla' />
-        <CalcButton name='bla' />
-        <CalcButton name='bla' />
-        <CalcButton name='bla' />
-      </View>
-      <View style={styles.row}>
-        <CalcButton name='bla2' />
-        <CalcButton name='bla2' />
-        <CalcButton name='bla2' />
-        <CalcButton name='bla2' />
-      </View>
-      <View style={styles.row}>
-        <CalcButton name='bla3' />
-        <CalcButton name='bla3' />
-        <CalcButton name='bla3' />
-        <CalcButton name='bla3' />
-      </View>
-      <View style={styles.row}>
-        <CalcButton name='bla4' />
-        <CalcButton name='bla4' />
-        <CalcButton name='bla4' />
-        <CalcButton name='bla4' />
-      </View>
-      <View style={styles.row}>
-        <CalcButton name='bla5' />
-        <CalcButton name='bla5' />
-        <CalcButton name='bla5' />
-        <CalcButton name='bla5' />
-      </View>
       <StatusBar style="auto" />
+      <View style={styles.separator}>
+        <View style={styles.calc_display}>
+          <Text onPress={this.majText}>
+            {this.state.text}
+          </Text>
+        </View>
+      </View>
+      <View style={styles.separator}>
+        <View style={styles.row}>
+          <CalcButton name='C' />
+          <CalcButton name='<-' />
+          <CalcButton name='%' />
+          <CalcButton name='/' />
+        </View>
+        <View style={styles.row}>
+          <CalcButton name='7' />
+          <CalcButton name='8' />
+          <CalcButton name='9' />
+          <CalcButton name='x' />
+        </View>
+        <View style={styles.row}>
+          <CalcButton name='4' />
+          <CalcButton name='5' />
+          <CalcButton name='6' />
+          <CalcButton name='-' />
+        </View>
+        <View style={styles.row}>
+          <CalcButton name='1' />
+          <CalcButton name='2' />
+          <CalcButton name='3' />
+          <CalcButton name='+' />
+        </View>
+        <View style={styles.row}>
+          <CalcButton name='' />
+          <CalcButton name='0' />
+          <CalcButton name=',' />
+          <CalcButton name='=' />
+        </View>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
     backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
   },
   row: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly'
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   button: {
     alignItems: 'center',
@@ -67,5 +84,20 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     letterSpacing: 0.25,
     color: 'white',
+  },
+  separator: {
+    flexDirection: 'column',
+    flexGrow: 1,
+    height: '50%',
+  },
+  calc_display: {
+    display: 'flex',
+    height: '100%'
+  },
+  calc_display_text: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
   }
 });
