@@ -18,11 +18,7 @@ export default function App() {
     <View style={styles.container}>
       <StatusBar style="auto" />
       <View style={styles.separator}>
-        <View style={styles.calc_display}>
-          <Text onPress={this.majText}>
-            {this.state.text}
-          </Text>
-        </View>
+
       </View>
       <View style={styles.separator}>
         <View style={styles.row}>
