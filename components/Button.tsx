@@ -1,14 +1,18 @@
 import React from "react";
 import { StyleSheet, Text, Pressable, Alert } from "react-native";
 
-const CalcButton = (props) => {
+export type props = {
+  name: string;
+}
+
+const CalcButton: React.FC<props> = ({name}) => {
   return (
   <Pressable style={styles.button}
     onPress={() => Alert.alert('ceci est un beau message')}
     android_ripple={{
       color: 'white',
     }}>
-    <Text style={styles.text}>{props.name}</Text>
+    <Text style={styles.text}>{name}</Text>
   </Pressable >
   );
 };

@@ -1,17 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, View, Text } from 'react-native';
 
-import CalcButton from './components/Button.js'
-
-constructor =()=> {
-  this.state = {
-    text: 'LE TEXT'
-  }
-}
-
-majText = () =>{
-  this.setText({text: 'le nouveau texte'})
-}
+import CalcButton from './components/Button'
 
 export default function App() {
   return (
