@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, Text, Pressable, Alert } from "react-native";
+import colors from "../styles/Colors";
 
 export type props = {
   name: string;
@@ -27,13 +28,13 @@ const styles = StyleSheet.create({
     width: 75,
     height: 75,
     elevation: 3,
-    backgroundColor: 'black',
+    backgroundColor: colors.PURPLE,
   },
   text: {
     fontSize: 20,
     lineHeight: 21,
     fontWeight: 'bold',
     letterSpacing: 0.25,
-    color: 'white',
+    color: colors.DARK_TEXT,
   },
 });

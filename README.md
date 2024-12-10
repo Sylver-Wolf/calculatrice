@@ -11,7 +11,8 @@ root
  |  |- assets
  |- component
  |  |-components
- |- App.js
+ |- App.tsx
+ |- Index.js
 ```
 
 ## Dev workflow
@@ -27,3 +28,14 @@ npx expo start --tunnel
 ```
 
 Once the server is launched, press `a` to launch the android live environement.
+
+### Check TypeScript syntax errors without runing the server
+
+```
+npx tsx
+```
+
+> [!WARNING]
+> Do not change index.js to index.tsx !
+> It might cause issues during the bundeling (according to the [react website](https://reactnative.dev/docs/typescript#adding-typescript-to-an-existing-project))
+
